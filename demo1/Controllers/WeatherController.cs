@@ -15,7 +15,7 @@ namespace demo1.Controllers
         public IEnumerable<WeatherInfo> Get()
         {
             var weatherInfList = new List<WeatherInfo>();
-            for (int i = 0; i < 0; i++)
+            for (int i = 0; i < 10; i++)
             {
                 var WeatherInfo = new WeatherInfo
                 {
@@ -23,6 +23,7 @@ namespace demo1.Controllers
                     Degree = i * 23 / 17,
                     DateTime = DateTime.Now.ToUniversalTime()
                 };
+                weatherInfList.Add(WeatherInfo);
             }
             return weatherInfList;
         
